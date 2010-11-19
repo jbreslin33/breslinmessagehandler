@@ -15,10 +15,12 @@ set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/dist")
 
 set(HDRS
 	MessageHandler.h
+	../breslinlistenserver/ListenServer.h
 )
 
 set(SRCS
 	MessageHandler.cpp
+	../breslinlistenserver/ListenServer.cpp
 	Main.cpp
 )
 
