@@ -8,7 +8,7 @@ Filename:    MessageHandler.h
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string>
 
 class GameServer;
 class ListenServer;
@@ -21,12 +21,11 @@ public:
     virtual ~MessageHandler(void);
 
 	//Messaging
-	virtual void          translateMessage(char*         message       );
-        
+	virtual void translateMessage(std::string message);
+	
 	//GameServer
 	virtual void          setGameServer   (GameServer*   gameServer    )  { mGameServer = gameServer; }
 	virtual GameServer*   getGameServer   (                            )  { return mGameServer;       }	
-
 
 	//ListenServer
 	virtual void          setListenServer (ListenServer* listenServer  )  { mListenServer = listenServer; }
